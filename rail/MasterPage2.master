@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <table class="style1">
+        <tr>
+            <td>
+            
+            
+                <asp:Image ID="Image1" runat="server" Height="156px" ImageUrl="~/Mysore_railway_station.JPG" 
+                    Width="179px" />
+                <asp:Image ID="Image2" runat="server" Height="152px" 
+                    ImageUrl="~/cooltext917787989.png" Width="1026px" BackColor="#33CCFF" />
+                </td><td>
+            
+            </td>
+            <td>
+            </td>
+        </tr>
+    
+    
+    
+    </table>
+    
+    <table><tr><td>
+    <asp:Menu ID="Menu1" runat="server">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Default4.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Train" Value="About Railway" NavigateUrl="~/Default7.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="PNR Status" Value="PNR Status" 
+                            NavigateUrl="~/Default6.aspx">
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu></td><td>
+            <asp:Image ID="Image3" runat="server" Height="95px" 
+                ImageUrl="~/railway-top-img.jpg" Width="974px" />
+        </td></tr></table>
+    
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

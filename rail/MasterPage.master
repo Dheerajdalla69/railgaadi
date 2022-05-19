@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            height: 119px;
+        }
+        .style4
+        {
+            width: 100%;
+            height: 28px;
+        }
+        </style>
+</head>
+<body bgcolor="#ffcccc" alink="#cccccc">
+    <form id="form1" runat="server">
+    <table class="style1">
+        <tr>
+            <td>
+                <asp:Image ID="Image1" runat="server" Height="156px" ImageUrl="~/images.jpg" 
+                    Width="179px" />
+                <asp:Image ID="Image2" runat="server" Height="152px" 
+                    ImageUrl="~/cooltext917787989.png" Width="1026px" BackColor="#33CCFF" />
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+    <div>
+        <asp:Menu ID="Menu1" runat="server" Height="53px" Orientation="Horizontal" 
+            style="font-size: xx-large" Width="1194px" BackColor="#CCCCCC" 
+            onmenuitemclick="Menu1_MenuItemClick">
+            <DynamicMenuItemStyle Font-Bold="True" Font-Size="X-Large" />
+            <Items>
+                <asp:MenuItem Text="File" Value="User">
+                    <asp:MenuItem Text="Logoff" Value="New Item" NavigateUrl="~/login.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Exit" Value="Exit"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Train" Value="Train">
+                    <asp:MenuItem Text="Add" Value="Add" NavigateUrl="~/Add.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Update" Value="Update" NavigateUrl="~/Update.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Remove" Value="Remove" NavigateUrl="~/delete.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Transaction" Value="Transaction">
+                    <asp:MenuItem Text="Reservation" Value="Reservation" 
+                        NavigateUrl="~/reservation.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Cancellation" Value="Cancellation" 
+                        NavigateUrl="~/cancellation.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Enquiry" Value="Enquiry">
+                    <asp:MenuItem Text="Train" Value="Train" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Passanger" Value="passanger" NavigateUrl="~/Default2.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="User" Value="User">
+                    <asp:MenuItem Text="Add_User" Value="Add_User" NavigateUrl="~/add_user.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Update_User" Value="New Item" 
+                        NavigateUrl="~/update_use.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Remove_User" Value="New Item" 
+                        NavigateUrl="~/deleteuser.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Report" Value="Report">
+                    <asp:MenuItem Text="Train" Value="Train" NavigateUrl="~/Default3.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <table class="style4">
+                <tr>
+                    <td bgcolor="#CCCCCC">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                </tr>
+            </table>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
